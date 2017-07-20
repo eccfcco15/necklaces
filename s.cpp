@@ -67,11 +67,16 @@ int main() {
         if (k == 0) return 0;
         string necklace;
         cin >> necklace;
-        
-        int n = 0;
-        do {
-            n++;
-        } while (!solve(necklace, n, k));
-        cout << n << " cuts required\n";
+
+        int num; cin >> num;
+        REP(i, num) {
+            shuffle(necklace.begin(), necklace.end(), g);
+
+            int n = 0;
+            do {
+                n++;
+            } while (!solve(necklace, n, k));
+            cout << n << " cuts required\n";
+        }
     }
 }
