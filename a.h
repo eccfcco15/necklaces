@@ -5,6 +5,8 @@
 #include <map>
 #include <random>
 #include <algorithm>
+#include <fstream>
+#include <numeric>
 
 using namespace std;
 

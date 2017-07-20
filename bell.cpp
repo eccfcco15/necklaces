@@ -1,14 +1,21 @@
 #include "bell.h"
 
-void printPart(vi p) {
+void printPart(ostream &out, vi p) {
     int numPartitions = *max_element(p.begin(), p.end());
+
     REP(q, numPartitions + 1) {
         REP(i, p.size())
 			if (p[i] == q)
+			{
+				out << i << " ";
                 cout << i << " ";
+			}
+		out << "| ";
         cout << "| ";
 	}
+	out << endl;
     cout << endl;
+
 }
 
 bool next(vi &p, vi &m) {
