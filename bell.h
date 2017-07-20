@@ -1,6 +1,6 @@
 #include "a.h"
 
-void printPart(vi p);
+void printPart(ostream &out, vi p);
 
 bool next(vi &p, vi &m);
 
